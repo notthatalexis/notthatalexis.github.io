@@ -1,9 +1,9 @@
-/* GENERAL */
+/* BODY */
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: #fefefe;
-  color: #333;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background: #fff;
+  color: #000; /* black text */
 }
 
 /* HEADER */
@@ -11,22 +11,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   background: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 100;
 }
 
 .site-name {
-  font-weight: bold;
+  font-weight: 600;
   font-size: 1.5rem;
+  color: #000;
 }
 
 .search-bar input {
   padding: 0.4rem 0.6rem;
   font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 /* HAMBURGER MENU */
@@ -38,39 +41,34 @@ body {
 
 .menu {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .menu a {
   text-decoration: none;
-  color: #333;
+  color: #000; /* black text for all links */
   font-weight: 500;
   padding: 0.5rem 0;
-}
-
-.menu a.deco-link {
-  color: #c0392b; /* highlight deco link */
-  font-weight: bold;
 }
 
 /* BLOG GRID */
 .blog-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  gap: 2rem;
   padding: 2rem;
 }
 
 .post-card {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-3px);
 }
 
 .post-card img {
@@ -80,18 +78,21 @@ body {
 
 .post-card h2 {
   margin: 0.5rem 1rem;
+  font-weight: 600;
+  color: #000;
 }
 
 .post-card p {
   margin: 0 1rem 1rem;
+  color: #333;
 }
 
 .post-card a {
   display: block;
   margin: 0 1rem 1rem;
-  color: #c0392b;
+  color: #000;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 /* RESPONSIVE */
@@ -103,8 +104,8 @@ body {
     position: absolute;
     top: 70px;
     right: 1rem;
-    width: 150px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    width: 180px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     border-radius: 8px;
     padding: 0.5rem 0;
   }

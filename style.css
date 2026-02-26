@@ -1,9 +1,8 @@
-/* BODY */
 body {
   margin: 0;
   font-family: 'Helvetica', 'Arial', sans-serif;
   background: #fff;
-  color: #000; /* black text */
+  color: #000;
 }
 
 /* HEADER */
@@ -22,7 +21,6 @@ body {
 .site-name {
   font-weight: 600;
   font-size: 1.5rem;
-  color: #000;
 }
 
 .search-bar input {
@@ -32,11 +30,11 @@ body {
   border-radius: 4px;
 }
 
-/* HAMBURGER MENU */
+/* MENU */
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
-  display: none; /* hidden on desktop */
+  display: none;
 }
 
 .menu {
@@ -46,7 +44,7 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #000; /* black text for all links */
+  color: #000; /* black text */
   font-weight: 500;
   padding: 0.5rem 0;
 }
@@ -79,7 +77,6 @@ body {
 .post-card h2 {
   margin: 0.5rem 1rem;
   font-weight: 600;
-  color: #000;
 }
 
 .post-card p {

@@ -2,10 +2,50 @@
 <html>
 <head>
   <title>Deco - notthatalexis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: white;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 20px 30px;
+    }
+
+    .site-name {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .back {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+
+    .content {
+      padding: 40px;
+    }
+  </style>
 </head>
-<body style="font-family: Arial; padding: 40px;">
-  <h1>Deco</h1>
-  <p>Welcome to my deco page.</p>
-  <a href="index.html">← Back to Home</a>
+
+<body>
+
+  <div class="header">
+    <div class="site-name">notthatalexis</div>
+    <a href="index.html" class="back">← Home</a>
+  </div>
+
+  <div class="content">
+    <h1>Deco</h1>
+    <p>Welcome to my deco page.</p>
+  </div>
+
 </body>
 </html>

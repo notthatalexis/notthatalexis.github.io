@@ -1,3 +1,4 @@
+/* RESET & BASE */
 body {
   margin: 0;
   font-family: 'Helvetica', 'Arial', sans-serif;
@@ -30,7 +31,7 @@ body {
   border-radius: 4px;
 }
 
-/* MENU */
+/* HAMBURGER MENU */
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
@@ -44,9 +45,14 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #000; /* black text */
+  color: #000; /* black for menu links */
   font-weight: 500;
   padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.menu a:hover {
+  color: #333; /* subtle hover effect */
 }
 
 /* BLOG GRID */
@@ -77,6 +83,7 @@ body {
 .post-card h2 {
   margin: 0.5rem 1rem;
   font-weight: 600;
+  color: #000;
 }
 
 .post-card p {
@@ -87,9 +94,14 @@ body {
 .post-card a {
   display: block;
   margin: 0 1rem 1rem;
-  color: #000;
+  color: #000;       /* black links for Read more */
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.post-card a:hover {
+  color: #333;       /* subtle hover effect */
 }
 
 /* RESPONSIVE */

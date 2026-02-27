@@ -1,138 +1,150 @@
-/* RESET & BASE */
+/* =========================
+   GLOBAL STYLING
+========================= */
+
 body {
   margin: 0;
   font-family: 'Helvetica', 'Arial', sans-serif;
-  background: #fff;
-  color: #000;
+  background: #ffffff;
+  color: #000000;
 }
 
-/* HEADER */
+/* Remove all default link colors */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #333333;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #fff;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  background: #ffffff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
 .site-name {
   font-weight: 600;
   font-size: 1.5rem;
+  letter-spacing: 1px;
 }
 
 .search-bar input {
   padding: 0.4rem 0.6rem;
-  font-size: 1rem;
-  border: 1px solid #ddd;
+  font-size: 0.9rem;
+  border: 1px solid #dddddd;
   border-radius: 4px;
+  outline: none;
 }
 
-/* HAMBURGER MENU */
+/* =========================
+   HAMBURGER MENU (ALWAYS)
+========================= */
+
+.right-section {
+  position: relative;
+}
+
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
-  display: none;
+  display: block; /* ALWAYS visible */
 }
 
+/* Hidden dropdown */
 .menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 0;
+  width: 200px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  padding: 0.5rem 0;
+}
+
+/* When clicked */
+.menu.show {
   display: flex;
-  gap: 1.5rem;
 }
 
 .menu a {
-  text-decoration: none;
-  color: #000; /* black for menu links */
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid #eeeeee;
   font-weight: 500;
-  padding: 0.5rem 0;
-  transition: color 0.2s ease;
+}
+
+.menu a:last-child {
+  border-bottom: none;
 }
 
 .menu a:hover {
-  color: #333; /* subtle hover effect */
+  background: #f7f7f7;
 }
 
-/* BLOG GRID */
+/* =========================
+   BLOG GRID
+========================= */
+
 .blog-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  padding: 2rem;
+  padding: 3rem 2rem;
 }
 
 .post-card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 }
 
 .post-card img {
   width: 100%;
+  height: 280px;
+  object-fit: cover;
   display: block;
 }
 
 .post-card h2 {
-  margin: 0.5rem 1rem;
+  margin: 1rem 1.2rem 0.5rem;
   font-weight: 600;
-  color: #000;
 }
 
 .post-card p {
-  margin: 0 1rem 1rem;
-  color: #333;
+  margin: 0 1.2rem 1rem;
+  color: #333333;
+  font-size: 0.95rem;
 }
 
 .post-card a {
   display: block;
-  margin: 0 1rem 1rem;
-  color: #000;       /* black links for Read more */
-  text-decoration: none;
+  margin: 0 1.2rem 1.5rem;
   font-weight: 500;
-  transition: color 0.2s ease;
-}
-
-.post-card a:hover {
-  color: #333;       /* subtle hover effect */
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .menu {
-    display: none;
-    flex-direction: column;
-    background: #fff;
-    position: absolute;
-    top: 70px;
-    right: 1rem;
-    width: 180px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 0.5rem 0;
-  }
-
-  .menu.show {
-    display: flex;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .menu a {
-    padding: 0.8rem 1rem;
-    border-bottom: 1px solid #eee;
-  }
-
-  .menu a:last-child {
-    border-bottom: none;
-  }
 }

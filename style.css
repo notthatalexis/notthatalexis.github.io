@@ -1,22 +1,27 @@
 /* =========================
-   GLOBAL STYLING
+   RESET
 ========================= */
 
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   background: #ffffff;
   color: #000000;
 }
 
-/* Remove all default link colors */
+/* Remove default link colors everywhere */
 a {
-  color: #000000;
   text-decoration: none;
+  color: #000000;
 }
 
 a:hover {
-  color: #333333;
+  opacity: 0.7;
 }
 
 /* =========================
@@ -27,9 +32,8 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
   background: #ffffff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -42,34 +46,34 @@ a:hover {
 }
 
 .site-name {
-  font-weight: 600;
   font-size: 1.5rem;
-  letter-spacing: 1px;
+  font-weight: 600;
 }
 
 .search-bar input {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 0.7rem;
   border: 1px solid #dddddd;
   border-radius: 4px;
+  font-size: 0.9rem;
   outline: none;
 }
 
 /* =========================
-   HAMBURGER MENU (ALWAYS)
+   HAMBURGER MENU
 ========================= */
 
 .right-section {
   position: relative;
 }
 
+/* ALWAYS visible */
 .hamburger {
   font-size: 2rem;
   cursor: pointer;
-  display: block; /* ALWAYS visible */
+  display: block;
 }
 
-/* Hidden dropdown */
+/* Hidden dropdown by default */
 .menu {
   display: none;
   flex-direction: column;
@@ -79,17 +83,17 @@ a:hover {
   width: 200px;
   background: #ffffff;
   border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
   padding: 0.5rem 0;
 }
 
-/* When clicked */
+/* Show when clicked */
 .menu.show {
   display: flex;
 }
 
 .menu a {
-  padding: 0.9rem 1.2rem;
+  padding: 1rem;
   border-bottom: 1px solid #eeeeee;
   font-weight: 500;
 }
@@ -99,7 +103,7 @@ a:hover {
 }
 
 .menu a:hover {
-  background: #f7f7f7;
+  background: #f5f5f5;
 }
 
 /* =========================
@@ -115,36 +119,35 @@ a:hover {
 
 .post-card {
   background: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
   overflow: hidden;
   transition: transform 0.2s ease;
 }
 
 .post-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-5px);
 }
 
 .post-card img {
   width: 100%;
-  height: 280px;
+  height: 300px;
   object-fit: cover;
-  display: block;
 }
 
 .post-card h2 {
-  margin: 1rem 1.2rem 0.5rem;
-  font-weight: 600;
+  margin: 1rem;
+  font-size: 1.2rem;
 }
 
 .post-card p {
-  margin: 0 1.2rem 1rem;
+  margin: 0 1rem 1rem;
   color: #333333;
   font-size: 0.95rem;
 }
 
 .post-card a {
   display: block;
-  margin: 0 1.2rem 1.5rem;
+  margin: 0 1rem 1.5rem;
   font-weight: 500;
 }

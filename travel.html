@@ -1,41 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <h2>Travel</h2>
 
-<div>
-  <a href="paris.html">
-    <img src="images/paris.jpg" style="width:100%; max-width:300px; border-radius:8px;">
-    <h3>Walking around Paris</h3>
-  </a>
-</div>
 <head>
   <title>Travel - notthatalexis</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      font-family: Arial, sans-serif;
+      background: #fafafa;
+      color: #222;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .image-block {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .image-block img {
+      width: 65%;
+      max-width: 450px;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
+    }
+
+    .image-block h3 {
+      margin-top: 15px;
+    }
+
+    a {
+      text-decoration: none;
+      color: #222;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+
 </head>
 
-<body style="padding:40px; max-width:700px; margin:auto;">
-  <style>
-.image-block {
-  text-align: center;
-  margin-bottom: 20px;
-}
+<body>
 
-.image-block img {
-  width: 65%;
-  max-width: 450px;
-  height: auto;
-  border-radius: 14px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.10);
-}
-</style>
+  <h1>Travel</h1>
 
-<h1>Travel</h1>
-
-<div class="post-card">
-  <img src="images/IMG_5876.jpeg" alt="Paris" style="width:100%;">
-  <h2>Walking around Paris</h2>
-  <p>A soft, romantic walk through the city...</p>
-  <a href="paris.html">Read more →</a>
-</div>
+  <div class="image-block">
+    <a href="paris.html">
+      <img src="images/IMG_5876.jpeg" alt="Paris">
+      <h3>Walking around Paris</h3>
+    </a>
+  </div>
 
 </body>
+
 </html>

@@ -3,63 +3,52 @@
 
 <head>
   <title>Travel - notthatalexis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      padding: 40px 20px;
-      font-family: Arial, sans-serif;
-      background: #fafafa;
-      color: #222;
-      max-width: 700px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    .image-block {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .image-block img {
-      width: 65%;
-      max-width: 450px;
-      height: auto;
-      border-radius: 14px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.10);
-    }
-
-    .image-block h3 {
-      margin-top: 15px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #222;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-
+  <!-- SAME CSS AS HOMEPAGE -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Travel</h1>
-
-  <div class="image-block">
-    <a href="paris.html">
-      <img src="images/IMG_5876.jpeg" alt="Paris">
-      <h3>Walking around Paris</h3>
-    </a>
+<!-- HEADER (same as homepage, simplified if you want) -->
+<div class="header">
+  <div class="left-section">
+    <div class="site-name">notthatalexis</div>
   </div>
 
-</body>
+  <div class="right-section">
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div id="dropdownMenu" class="menu">
+      <a href="travel.html">Travel</a>
+      <a href="fashion.html">Fashion</a>
+      <a href="life.html">Life</a>
+      <a href="deco.html">Deco</a>
+    </div>
+  </div>
+</div>
 
+<!-- PAGE TITLE -->
+<h1 style="text-align:center; margin-top:30px;">Travel</h1>
+
+<!-- SAME BLOG GRID SYSTEM -->
+<div class="blog-container">
+
+  <div class="post-card">
+    <img src="images/IMG_5876.jpeg" alt="Paris">
+    <h2>Walking around Paris</h2>
+    <p>A soft, romantic walk through the city...</p>
+    <a href="paris.html">Read more →</a>
+  </div>
+
+</div>
+
+<!-- SAME SCRIPT -->
+<script>
+function toggleMenu() {
+  document.getElementById("dropdownMenu").classList.toggle("show");
+}
+</script>
+
+</body>
 </html>
